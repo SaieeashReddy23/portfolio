@@ -508,20 +508,48 @@ ul {
 }
 
 .work-time {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: AvantGarde, sans-serif;
 }
 
 .work-title {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .work-company {
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .work-time {
+    font-size: 1.5rem;
+  }
+
+  .work-title {
+    font-size: 1.5rem;
+  }
+
+  .work-company {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .work-time {
+    font-size: 2rem;
+  }
+
+  .work-title {
+    font-size: 2rem;
+  }
+
+  .work-company {
+    font-size: 1.1rem;
+  }
 }
 
 .projects-container {
