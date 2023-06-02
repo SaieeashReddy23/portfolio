@@ -5,14 +5,14 @@ import john from '../assets/images/john.jpg'
 import project1 from '../assets/images/project1.jpg'
 
 import html from '../assets/images/html.png'
-import css from '../assets/images/css.png'
 import js from '../assets/images/javascript.png'
 import react from '../assets/images/react.png'
 import node from '../assets/images/node.png'
-import mongodb from '../assets/images/mongodb.png'
+import mongodb from '../assets/images/mongo.png'
 import spring from '../assets/images/spring.png'
 import csslogo from '../assets/images/csslogo.png'
-import SAI from '../assets/images/SAI.png'
+
+import googleLocation from '../assets/images/googleLocation.png'
 
 import { AiFillLinkedin } from 'react-icons/ai'
 
@@ -85,10 +85,26 @@ const HomePage = () => {
               <div className="line"></div>
               <h2>I'm Sai</h2>
               <p className="hero-subtitle">
-                A Passionate Full Stack Software Engineer, proficient in
-                leveraging the power of the MERN stack to build innovative and
-                robust solutions.
+                A Passionate Full Stack Software Engineer, proficient in MERN
+                stack based in Bengaluru,India.
+                <img
+                  className="location-img"
+                  src={googleLocation}
+                  alt="location"
+                />
               </p>
+              <ul className="imp-links">
+                <li>
+                  <a href="#">
+                    <AiFillLinkedin />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <BsGithub />
+                  </a>
+                </li>
+              </ul>
             </div>
             <div className="img-container">
               <img src={john} alt="john" className="hero-img" />
