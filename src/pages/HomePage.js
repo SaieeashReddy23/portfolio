@@ -2,7 +2,10 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import { MdClose } from 'react-icons/md'
 import { useEffect, useState } from 'react'
 import john from '../assets/images/john.jpg'
-import project1 from '../assets/images/project1.jpg'
+
+import project1 from '../assets/images/project-1.png'
+import project2 from '../assets/images/project-2.png'
+import project3 from '../assets/images/project-3.png'
 
 import html from '../assets/images/html.png'
 import js from '../assets/images/javascript.png'
@@ -14,11 +17,13 @@ import csslogo from '../assets/images/csslogo.png'
 
 import googleLocation from '../assets/images/googleLocation.png'
 
-import { AiFillLinkedin } from 'react-icons/ai'
+import { BsLinkedin } from 'react-icons/bs'
 
 import { FaInstagram } from 'react-icons/fa'
 import { BsGithub } from 'react-icons/bs'
 import { FaTwitter } from 'react-icons/fa'
+import { IoCallSharp } from 'react-icons/io5'
+import { HiOutlineMail } from 'react-icons/hi'
 
 const HomePage = () => {
   const [sidebar, setSidebar] = useState(false)
@@ -51,7 +56,7 @@ const HomePage = () => {
         }
       >
         <div className="navbar-container">
-          <a href="#" className="logo">
+          <a href="index.html" className="logo">
             Saieeash Reddy
           </a>
           <ul className="nav-links">
@@ -87,20 +92,34 @@ const HomePage = () => {
               <p className="hero-subtitle">
                 A Passionate Full Stack Software Engineer, proficient in MERN
                 stack based in Bengaluru,India.
-                <img
-                  className="location-img"
-                  src={googleLocation}
-                  alt="location"
-                />
+                <a
+                  href="https://goo.gl/maps/dWSMxq1yzDiVkzEr7"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    className="location-img"
+                    src={googleLocation}
+                    alt="location"
+                  />
+                </a>
               </p>
               <ul className="imp-links">
                 <li>
-                  <a href="#">
-                    <AiFillLinkedin />
+                  <a
+                    href="https://linkedin.com/in/saieeash-reddy-35120a231"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsLinkedin />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://github.com/SaieeashReddy23"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BsGithub />
                   </a>
                 </li>
@@ -177,42 +196,57 @@ const HomePage = () => {
         <div className="projects-content">
           <div className="project">
             <div className="project-text-container">
-              <div className="project-title">Project-1</div>
+              <div className="project-title">Portfolio Project</div>
               <div className="project-description">
-                This is project is done using React which is the most used front
-                end framework in the industry i am proud to be the front end
-                develop
+                This Project id done using HTML,CSS and Javascript. This is my
+                first project and i am proud to be the front end developer.
               </div>
             </div>
             <div className="project-img-container">
-              <img src={project1} alt="Project-1" className="project-img" />
+              <a
+                href="https://sai-protfolio-project.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={project1} alt="Project-1" className="project-img" />
+              </a>
             </div>
           </div>
           <div className="project">
             <div className="project-img-container">
-              <img src={project1} alt="Project-1" className="project-img" />
+              <a
+                href="https://sai-backroads-project.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={project2} alt="Project-2" className="project-img" />
+              </a>
             </div>
             <div className="project-text-container">
-              <div className="project-title">Project-2</div>
+              <div className="project-title">Back Roads Project</div>
               <div className="project-description">
-                This is project is done using React which is the most used front
-                end framework in the industry i am proud to be the front end
-                develop
+                This Project id done using HTML,CSS and Javascript. This is my
+                first project and i am proud to be the front end developer.
               </div>
             </div>
           </div>
 
           <div className="project">
             <div className="project-text-container">
-              <div className="project-title">Project-3</div>
+              <div className="project-title">Converse UI</div>
               <div className="project-description">
-                This is project is done using React which is the most used front
-                end framework in the industry i am proud to be the front end
-                develop
+                This Project id done using HTML,CSS and Javascript. This is my
+                first project and i am proud to be the front end developer.
               </div>
             </div>
             <div className="project-img-container">
-              <img src={project1} alt="Project-1" className="project-img" />
+              <a
+                href="https://sai-converse.netlify.app/login"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={project3} alt="Project-3" className="project-img" />
+              </a>
             </div>
           </div>
         </div>
@@ -221,26 +255,57 @@ const HomePage = () => {
       <div className="footer-container">
         <ul className="footer-soc-icons">
           <li>
-            <a href="#">
-              <AiFillLinkedin />
+            <a
+              href="https://linkedin.com/in/saieeash-reddy-35120a231"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsLinkedin />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a
+              href="https://github.com/SaieeashReddy23"
+              target="_blank"
+              rel="noreferrer"
+            >
               <BsGithub />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a
+              href="https://twitter.com/ReddySaieeash"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaTwitter />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a
+              href="https://www.instagram.com/saieeashreddy1/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaInstagram />
             </a>
           </li>
         </ul>
+
+        <div className="contact-details">
+          <div className="mobile">
+            <span>
+              <IoCallSharp />
+            </span>
+            <span> +91 9629624617</span>
+          </div>
+          <div className="email">
+            <span>
+              <HiOutlineMail />
+            </span>
+            <span>saieeashreddy1@gmail.com</span>
+          </div>
+        </div>
         <div className="footer-text">
           {`© ${date} Saieeash Reddy. All Rights Reserved`}
         </div>

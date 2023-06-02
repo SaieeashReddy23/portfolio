@@ -382,6 +382,11 @@ ul {
   object-fit: cover;
   position: relative;
   top: 5px;
+  transition: var(--transition);
+}
+
+.location-img:hover {
+  transform: scale(1.2);
 }
 
 .imp-links {
@@ -419,7 +424,7 @@ ul {
 .hero-img {
   padding: 0.2rem;
   display: block;
-  animation: morph 8s ease-in-out infinite;
+  animation: morph 5s ease-in-out infinite;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   height: 300px;
   transition: all 1s ease-in-out;
@@ -597,6 +602,10 @@ ul {
 .project-img-container {
   width: 100%;
   max-width: 500px;
+  border: 1px solid var(--grey-200);
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .project-img {
@@ -605,6 +614,11 @@ ul {
   width: 100%;
   object-fit: cover;
   border-radius: 15px;
+  transition: var(--transition);
+}
+
+.project-img:hover {
+  transform: scale(1.25);
 }
 
 @media screen and (min-width: 768px) {
@@ -646,4 +660,41 @@ ul {
   margin-bottom: 1rem;
   letter-spacing: 0.1rem;
   color: var(--grey-400);
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+  color: var(--grey-400);
+}
+
+.mobile {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.mobile span {
+  display: grid;
+  place-items: center;
+}
+
+.email {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.email span {
+  display: grid;
+  place-items: center;
+}
+
+.mobile:hover,
+.email:hover {
+  color: var(--white);
 }
