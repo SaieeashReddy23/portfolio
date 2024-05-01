@@ -1,8 +1,10 @@
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { MdClose } from 'react-icons/md'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import john from '../assets/images/john.jpg'
+import sai from '../assets/images/my-image.jpeg'
 
+import ecommerceProject from '../assets/images/ecommerce.png'
 import project1 from '../assets/images/project-1.png'
 import project2 from '../assets/images/project-2.png'
 import project3 from '../assets/images/project-3.png'
@@ -30,6 +32,15 @@ const HomePage = () => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   const date = new Date().getFullYear()
+
+  const projectRef = useRef(null)
+  const aboutRef = useRef(null)
+  const workRef = useRef(null)
+  const contactRef = useRef(null)
+
+  const handleScroll = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' })
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,10 +71,10 @@ const HomePage = () => {
             Saieeash Reddy
           </a>
           <ul className="nav-links">
-            <li>About</li>
-            <li>Work</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li onClick={() => handleScroll(aboutRef)}>About</li>
+            <li onClick={() => handleScroll(workRef)}>Work</li>
+            <li onClick={() => handleScroll(projectRef)}>Projects</li>
+            <li onClick={() => handleScroll(contactRef)}>Contact</li>
           </ul>
           <span className="ham-icon" onClick={() => setSidebar(true)}>
             <RxHamburgerMenu />
@@ -83,15 +94,15 @@ const HomePage = () => {
         </ul>
       </div>
 
-      <div className="hero-container">
+      <div ref={aboutRef} className="hero-container">
         <div className="hero-content">
           <div className="hero">
             <div className="hero-text">
               <div className="line"></div>
               <h2>I'm Sai</h2>
               <p className="hero-subtitle">
-                A Passionate Full Stack Software Engineer, proficient in MERN
-                stack based in Bengaluru,India.
+                A Passionate Full Stack Software Engineer, proficient in
+                Java(Springboot) and MERN stack based in Hyderabad,India.
                 <a
                   href="https://goo.gl/maps/dWSMxq1yzDiVkzEr7"
                   target="_blank"
@@ -126,7 +137,7 @@ const HomePage = () => {
               </ul>
             </div>
             <div className="img-container">
-              <img src={john} alt="john" className="hero-img" />
+              <img src={sai} alt="Sai" className="hero-img" />
             </div>
           </div>
           <div className="hero-skills-container">
@@ -159,20 +170,20 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="work-outer-container">
+      <div ref={workRef} className="work-outer-container">
         <div className="work-container">
           <div className="work-container-title">Work experience :-</div>
 
           <div className="work-content">
             <div className="work">
-              <div className="work-time">NOW </div>
+              <div className="work-time">weekends </div>
               <div className="work-text-container">
-                <div className="work-title">FrontEnd Engineer</div>
-                <div className="work-company">Contract</div>
+                <div className="work-title"> Frontend projects</div>
+                <div className="work-company">Freelance</div>
               </div>
             </div>
             <div className="work">
-              <div className="work-time"> 2022 </div>
+              <div className="work-time"> 2022 - 2024 </div>
               <div className="work-text-container">
                 <div className="work-title">Software Engineer</div>
                 <div className="work-company">
@@ -191,24 +202,29 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="projects-container">
+      <div ref={projectRef} className="projects-container">
         <div className="projects-container-title">Projects :-</div>
         <div className="projects-content">
           <div className="project">
             <div className="project-text-container">
-              <div className="project-title">Portfolio Project</div>
+              <div className="project-title">Ecommerce project</div>
               <div className="project-description">
-                This Project id done using HTML,CSS and Javascript. This is my
-                first project and i am proud to be the front end developer.
+                Developed a responsive e-commerce platform using React,
+                featuring advanced functionalities like real-time search, secure
+                user authentication, and integrated payment processing.
               </div>
             </div>
             <div className="project-img-container">
               <a
-                href="https://sai-protfolio-project.netlify.app/"
+                href="https://saieeash-react-ecommerce-site.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={project1} alt="Project-1" className="project-img" />
+                <img
+                  src={ecommerceProject}
+                  alt="Project-1"
+                  className="project-img"
+                />
               </a>
             </div>
           </div>
@@ -252,7 +268,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="footer-container">
+      <div ref={contactRef} className="footer-container">
         <ul className="footer-soc-icons">
           <li>
             <a
